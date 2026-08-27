@@ -151,6 +151,24 @@ const Home = () => {
       {/* ================= SERVICES ================= */}
       <section id="services" className="services-section">
 
+        <h2>Our Services</h2>
+
+<div className="service-card">
+  <span>🛒</span>
+  <h3>Barter for FMCG Products</h3>
+  <p>
+    Now enjoy smart and flexible barter opportunities for FMCG products.
+  </p>
+</div>
+
+<div className="service-card">
+  <span>🎁</span>
+  <h3>Barter for Gifting</h3>
+  <p>
+    Now access innovative barter solutions for corporate and promotional gifting.
+  </p>
+</div>
+
         <div className="section-heading">
 
           <p>WHAT WE OFFER</p>

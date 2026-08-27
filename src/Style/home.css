@@ -235,15 +235,119 @@ section {
 ===================================================== */
 
 .about-section {
+  position: relative;
+  overflow: hidden;
+
   padding: 100px 6%;
 
   background:
     linear-gradient(
       135deg,
-      #fffaf2,
-      #ffffff
+      #cda649 0%,
+      #484335 50%,
+      #3e4331 100%
     );
+
+  isolation: isolate;
 }
+
+
+/* ============================= */
+/* BIG DECORATIVE CIRCLE */
+/* ============================= */
+
+.about-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(235, 159, 6, 0.803);
+
+  top: -260px;
+  left: -180px;
+
+  box-shadow:
+    0 0 0 35px rgba(152, 103, 5, 0.955),
+    0 0 0 70px rgba(225, 168, 54, 0.697);
+
+  animation: aboutCircle 12s ease-in-out infinite;
+
+  z-index: -1;
+}
+
+
+/* ============================= */
+/* SECOND CIRCLE */
+/* ============================= */
+
+.about-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgb(28, 47, 11);
+
+  right: -190px;
+  bottom: -220px;
+
+  box-shadow:
+    0 0 0 30px rgba(48, 61, 37, 0.95),
+    0 0 0 65px rgb(55, 66, 46);
+
+  animation: aboutCircle2 10s ease-in-out infinite;
+
+  z-index: -1;
+}
+
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+
+@keyframes aboutCircle {
+
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(60px, 40px) rotate(15deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+}
+
+
+@keyframes aboutCircle2 {
+
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50px, -40px) rotate(-12deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+}
+
+
 
 .about-content {
   max-width: 1200px;
@@ -272,7 +376,7 @@ section {
 }
 
 .about-text p {
-  color: #666;
+  color: #fff;
 
   font-size: 15px;
 
@@ -390,10 +494,125 @@ section {
    SERVICES
 ===================================================== */
 
+/* ================================= */
+/* SERVICES SECTION */
+/* ================================= */
+
 .services-section {
+  position: relative;
+  overflow: hidden;
+
   padding: 100px 6%;
 
-  background: #ffffff;
+  background:
+    linear-gradient(
+      135deg,
+      #cda649 0%,
+      #484335 50%,
+      #3e4331 100%
+    );
+
+  isolation: isolate;
+}
+
+
+/* ================================= */
+/* BIG DECORATIVE CIRCLE */
+/* ================================= */
+
+.services-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(235, 159, 6, 0.80);
+
+  top: -260px;
+  left: -180px;
+
+  box-shadow:
+    0 0 0 35px rgba(152, 103, 5, 0.95),
+    0 0 0 70px rgba(225, 168, 54, 0.70);
+
+  animation: servicesCircle 12s ease-in-out infinite;
+
+  z-index: -1;
+}
+
+
+/* ================================= */
+/* SECOND DECORATIVE CIRCLE */
+/* ================================= */
+
+.services-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgb(28, 47, 11);
+
+  right: -190px;
+  bottom: -220px;
+
+  box-shadow:
+    0 0 0 30px rgba(48, 61, 37, 0.95),
+    0 0 0 65px rgb(55, 66, 46);
+
+  animation: servicesCircle2 10s ease-in-out infinite;
+
+  z-index: -1;
+}
+
+
+/* ================================= */
+/* FIRST CIRCLE ANIMATION */
+/* ================================= */
+
+@keyframes servicesCircle {
+
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(60px, 40px) rotate(15deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+}
+
+
+/* ================================= */
+/* SECOND CIRCLE ANIMATION */
+/* ================================= */
+
+@keyframes servicesCircle2 {
+
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50px, -40px) rotate(-12deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
 }
 
 .services-grid {
@@ -414,7 +633,7 @@ section {
 
   padding: 38px;
 
-  background: #fafafa;
+  /* background: #fafafa; */
 
   border: 1px solid #eeeeee;
 
@@ -442,7 +661,7 @@ section {
 .service-card:hover {
   transform: translateY(-8px);
 
-  background: #111;
+  background: #707055;
 
   border-color: #111;
 
@@ -477,7 +696,7 @@ section {
 }
 
 .service-card p {
-  color: #666;
+  color: #fff;
 
   font-size: 14px;
 
@@ -497,7 +716,7 @@ section {
 }
 
 .service-card li {
-  color: #555;
+  color: #fff;
 
   margin-bottom: 8px;
 
@@ -724,10 +943,168 @@ section {
    CONTACT
 ===================================================== */
 
+/* ================================= */
+/* CONTACT SECTION */
+/* ================================= */
+
 .contact-section {
+  position: relative;
+  overflow: hidden;
+
   padding: 100px 6%;
 
-  background: #f7f7f7;
+  background:
+    linear-gradient(
+      135deg,
+      #cda649 0%,
+      #484335 50%,
+      #3e4331 100%
+    );
+
+  isolation: isolate;
+}
+
+
+/* ================================= */
+/* BIG DECORATIVE CIRCLE */
+/* ================================= */
+
+.contact-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(235, 159, 6, 0.80);
+
+  top: -260px;
+  left: -180px;
+
+  box-shadow:
+    0 0 0 35px rgba(152, 103, 5, 0.95),
+    0 0 0 70px rgba(225, 168, 54, 0.70);
+
+  animation: contactCircle 12s ease-in-out infinite;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* ================================= */
+/* SECOND DECORATIVE CIRCLE */
+/* ================================= */
+
+.contact-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgb(28, 47, 11);
+
+  right: -190px;
+  bottom: -220px;
+
+  box-shadow:
+    0 0 0 30px rgba(45, 42, 38, 0.95),
+    0 0 0 65px rgb(36, 41, 32);
+
+  animation: contactCircle2 10s ease-in-out infinite;
+
+  z-index: -1;
+
+  pointer-events: none;
+}
+
+
+/* ================================= */
+/* FIRST CIRCLE ANIMATION */
+/* ================================= */
+
+@keyframes contactCircle {
+
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(60px, 40px) rotate(15deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+}
+
+
+/* ================================= */
+/* SECOND CIRCLE ANIMATION */
+/* ================================= */
+
+@keyframes contactCircle2 {
+
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(-50px, -40px) rotate(-12deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+}
+
+
+/* ================================= */
+/* CONTACT CONTENT ABOVE EFFECT */
+/* ================================= */
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ================================= */
+/* MOBILE RESPONSIVE */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    padding: 70px 5%;
+  }
+
+  .contact-section::before {
+    width: 320px;
+    height: 320px;
+
+    top: -160px;
+    left: -140px;
+  }
+
+  .contact-section::after {
+    width: 280px;
+    height: 280px;
+
+    right: -140px;
+    bottom: -150px;
+  }
+
 }
 
 .contact-content {
@@ -771,7 +1148,7 @@ section {
 }
 
 .contact-info > p {
-  color: #666;
+  color: #fff;
 
   font-size: 15px;
 
@@ -789,7 +1166,7 @@ section {
 }
 
 .contact-details p {
-  color: #444;
+  color: #fff;
 
   font-size: 15px;
 }
