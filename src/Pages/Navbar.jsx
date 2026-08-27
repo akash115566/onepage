@@ -16,7 +16,7 @@ const Navbar = () => {
         {/* Logo */}
         <div className="logo">
           <a href="#home" onClick={closeMenu}>
-            <img src="/Home/logo.jfif" alt="PMC Logo" />
+            <img src="/Home/logo3.jfif" alt="PMC Logo" />
             <img src="/Home/logo1.jfif" alt="PMC Logo"  style={{padding:"5px"}}/>
           </a>
         </div>
